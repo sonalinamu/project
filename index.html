@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+    </style>
+    <title>Hotel Booking</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Hotel Booking</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reservation">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center">
+        <div class="container">
+            <h1 class="display-4">Luxury Stay Awaits You</h1>
+            <p class="lead">Book your dream hotel now and experience comfort like never before.</p>
+            <a href="#reservation" class="btn btn-primary btn-lg" >Book Now</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-4 bg-light">
+        <div class="container text-center">
+            <h2 style="color: bl; font-weight: bold;">Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-bed fa-3x"></i>
+                        <h3>Comfortable Rooms</h3>
+                        <p>Experience the ultimate comfort in our well-furnished rooms.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-wifi fa-3x"></i>
+                        <h3>Free Wi-Fi</h3>
+                        <p>Stay connected with complimentary high-speed internet access.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-utensils fa-3x"></i>
+                        <h3>Room Service</h3>
+                        <p>Enjoy delicious meals with our 24/7 room service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-4">
+        <div class="container text-center">
+            <h2 style="color: rgb(255, 192, 216); font-weight: bold;">Make a Reservation</h2>
+            <form id="reservationForm" >
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="checkin">Check-in Date</label>
+                        <input type="date" class="form-control" id="checkin" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="checkout">Check-out Date</label>
+                        <input type="date" class="form-control" id="checkout" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Submit Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    
+    
+    <section id="contact" class="py-5 bg-light" >
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p>Have questions or ready to book? Contact us now!</p>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Cityville</li>
+                <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                <li><i class="fas fa-envelope"></i> info@example.com</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up for Exclusive Offers</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="signupName">Name</label>
+                            <input type="text" class="form-control" id="signupName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Hotel Booking. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
